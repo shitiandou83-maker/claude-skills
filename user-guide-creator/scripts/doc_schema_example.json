@@ -1,0 +1,48 @@
+{
+  "_comment": "docx 生成配置模板 —— AI 根据实际 PRD 内容生成此 JSON，然后调用 gen_docx.py",
+  "cover": {
+    "title": "产品名称",
+    "subtitle": "使用指南",
+    "version": "V1.0",
+    "date": "2026-06-26",
+    "author": "作者名"
+  },
+  "output_dir": "/path/to/output/dir",
+  "doc_filename": "用户手册.docx",
+  "screenshot_dir": "/tmp/guide-screenshots",
+  "content": [
+    {"type": "heading", "level": 1, "text": "功能概述"},
+    {"type": "paragraph", "text": "这里是功能概述正文..."},
+    {"type": "paragraph", "text": "第二段..."},
+
+    {"type": "heading", "level": 1, "text": "使用步骤"},
+    {"type": "heading", "level": 2, "text": "权限与准备"},
+    {"type": "quote", "prefix": "权限说明:", "text": "本功能面向XX用户开放。"},
+    {"type": "quote", "prefix": "如何获取权限:", "text": "联系管理员申请。"},
+    {"type": "paragraph", "bold": true, "text": "前置条件:"},
+    {"type": "list", "bullets": ["条件1", "条件2", "条件3"]},
+
+    {"type": "heading", "level": 2, "text": "操作指引"},
+    {"type": "heading", "level": 3, "text": "一、模块A"},
+    {"type": "paragraph", "text": "模块A的描述..."},
+    {"type": "screenshot", "file": "01_dashboard.png", "caption": "图1: 模块A页面"},
+    {"type": "paragraph", "bold": true, "text": "1. 步骤一"},
+    {"type": "paragraph", "text": "步骤一的详细说明..."},
+    {"type": "quote", "prefix": "小贴士:", "text": "这里是提示内容。"},
+
+    {"type": "heading", "level": 3, "text": "二、模块B"},
+    {"type": "paragraph", "text": "模块B的描述..."},
+    {"type": "screenshot", "file": "02_module_b.png", "caption": "图2: 模块B页面"},
+    {"type": "table", "headers": ["字段", "说明"], "rows": [["字段1", "说明1"], ["字段2", "说明2"]]},
+
+    {"type": "heading", "level": 1, "text": "常见问题"},
+    {"type": "quote", "prefix": "问题: xxx?", "text": "解决方法: yyy。"},
+
+    {"type": "heading", "level": 1, "text": "注意事项"},
+    {"type": "quote", "prefix": "注意:", "text": "xxx"},
+
+    {"type": "heading", "level": 1, "text": "相关说明"},
+    {"type": "paragraph", "bold": true, "text": "术语速查:"},
+    {"type": "table", "headers": ["术语", "含义"], "rows": [["术语1", "含义1"]]}
+  ]
+}
