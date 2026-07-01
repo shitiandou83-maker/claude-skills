@@ -1,0 +1,62 @@
+{
+  "_comment": "截图配置模板 —— AI 根据原型 HTML 结构生成此 JSON，然后调用 screenshot.py",
+  "html_path": "/absolute/path/to/原型.html",
+  "output_dir": "/tmp/guide-screenshots",
+  "viewport": {"width": 1440, "height": 900},
+  "wait_initial_ms": 2500,
+  "wait_between_ms": 800,
+  "pages": [
+    {
+      "name": "dashboard",
+      "file": "01_dashboard.png",
+      "clicks": [
+        {"type": "css", "selector": ".left-nav .nav-item:has-text('监控大盘')", "wait_after_ms": 800}
+      ],
+      "full_page": true
+    },
+    {
+      "name": "agent_manage",
+      "file": "02_agent_manage.png",
+      "clicks": [
+        {"type": "css", "selector": ".left-nav .nav-item:has-text('智能体管理')", "wait_after_ms": 800}
+      ],
+      "full_page": true
+    },
+    {
+      "name": "create_modal_step1",
+      "file": "03_create_step1.png",
+      "clicks": [
+        {"type": "css", "selector": ".left-nav .nav-item:has-text('智能体管理')", "wait_after_ms": 500},
+        {"type": "text", "selector": "新建智能体", "wait_after_ms": 800}
+      ],
+      "full_page": true
+    },
+    {
+      "name": "create_modal_step2",
+      "file": "04_create_step2.png",
+      "clicks": [
+        {"type": "text", "selector": "新建智能体", "wait_after_ms": 500},
+        {"type": "text", "selector": "下一步", "wait_after_ms": 800}
+      ],
+      "full_page": true
+    },
+    {
+      "name": "close_modal_and_platform",
+      "file": "05_platform_manage.png",
+      "clicks": [
+        {"type": "eval", "selector": "document.querySelector('.modal-close')?.click()", "wait_after_ms": 500},
+        {"type": "css", "selector": ".left-nav .nav-item:has-text('模型平台管理')", "wait_after_ms": 800}
+      ],
+      "full_page": true
+    },
+    {
+      "name": "log_detail",
+      "file": "08_log_detail.png",
+      "clicks": [
+        {"type": "css", "selector": ".left-nav .nav-item:has-text('日志管理')", "wait_after_ms": 800},
+        {"type": "css", "selector": "td button:has-text('详情')", "wait_after_ms": 800}
+      ],
+      "full_page": true
+    }
+  ]
+}
