@@ -1,0 +1,31 @@
+{
+  "_comment": "PRD docx 生成配置模板 —— AI 根据 PRD 内容和原型截图生成此 JSON，然后调用 gen_prd_docx.py",
+  "cover": {
+    "title": "【PRD】产品名称 V1.0",
+    "version": "V1.0",
+    "date": "2026-07-01",
+    "author": "作者"
+  },
+  "output_dir": "/path/to/产品管理/产品名称/1.0",
+  "doc_filename": "PRD文档.docx",
+  "screenshot_dir": "/tmp/prd-screenshots",
+  "content": [
+    {"type": "heading", "level": 1, "text": "概述"},
+    {"type": "heading", "level": 2, "text": "需求背景、目标及收益"},
+    {"type": "paragraph", "text": "背景描述..."},
+
+    {"type": "heading", "level": 1, "text": "功能需求"},
+    {"type": "heading", "level": 2, "text": "【功能模块名称】"},
+    {"type": "heading", "level": 3, "text": "【子功能名称】"},
+
+    {"type": "table", "headers": ["用户场景", "..."], "rows": [["...", "..."]]},
+    {"type": "paragraph", "bold": true, "text": "流程说明"},
+    {"type": "paragraph", "text": "1. 用户进入页面... 2. 点击新建... 3. 填写表单..."},
+
+    {"type": "paragraph", "bold": true, "text": "原型/交互图"},
+    {"type": "screenshot", "file": "01_dashboard.png", "caption": "图1: 运维大屏页面"},
+    {"type": "screenshot", "file": "02_create_modal.png", "caption": "图2: 新建数据源弹窗"},
+
+    {"type": "page_break"}
+  ]
+}
